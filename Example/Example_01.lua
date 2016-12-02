@@ -14,16 +14,16 @@ print ( ffi.string(mediaInfo.MediaInfoA_Option(nil,"Info_Version", "") ));
 local mi = mediaInfo.MediaInfoA_New();
 
 -- open target File
-mediaInfo.MediaInfoA_Open (mi,filePath); 
+mediaInfo.MediaInfoA_Open (mi,filePath);
 
-
+-- set option
 mediaInfo.MediaInfoA_Option(mi,"Inform","")
 
 -- get propety
 local generalInfo = ffi.string(mediaInfo.MediaInfoA_Inform(mi,0));
 
--- close 
-mediaInfo.MediaInfoA_Close (mi);  
+-- close
+mediaInfo.MediaInfoA_Close (mi);
 
 -- delete MediaInto instance
 mediaInfo.MediaInfoA_Delete (mi);
@@ -59,4 +59,3 @@ print ( generalInfo)
 -- Bit depth                                : 16 bits
 -- Stream size                              : 1.22 MiB (100%)
 --====================================================================
-

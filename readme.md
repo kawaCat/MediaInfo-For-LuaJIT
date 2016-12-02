@@ -1,9 +1,9 @@
 
 ## MediaInfo for LuaJit
 
-Mediainfo library for use in LuaJit FFI.
+MediaInfo library for use in LuaJit FFI.
 
-* open Dynamics Engine - https://mediaarea.net/en/MediaInfo
+* MediaInfo - https://mediaarea.net/en/MediaInfo
 * LuaJIT - http://luajit.org/
 
 ### Note
@@ -11,12 +11,12 @@ Mediainfo library for use in LuaJit FFI.
 ``` lua
 
 --====================================================================
-local ffi =require("ffi")
+local ffi =require("ffi");
 local mediaInfo = require("ffi-mediaInfo");
 --====================================================================
 
 -- set filePath
-local filePath ="sampleWav//Alarm3_01.wav"
+local filePath ="sampleWav//Alarm3_01.wav";
 
 --  print Mediainfo version  to console
 print ( ffi.string(mediaInfo.MediaInfoA_Option(nil,"Info_Version", "") ));
@@ -26,6 +26,9 @@ local mi = mediaInfo.MediaInfoA_New();
 
 -- open target File
 mediaInfo.MediaInfoA_Open (mi,filePath);
+
+-- set option
+mediaInfo.MediaInfoA_Option(mi,"Inform","");
 
 -- get propety
 local generalInfo = ffi.string(mediaInfo.MediaInfoA_Inform(mi,1));
@@ -39,7 +42,7 @@ mediaInfo.MediaInfoA_Delete (mi);
 --====================================================================
 
 -- print to console
-print ( generalInfo)
+print ( generalInfo);
 
 ```
 
