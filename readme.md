@@ -74,3 +74,14 @@ print ( generalInfo);
 -- Stream size                              : 1.22 MiB (100%)
 --====================================================================
 ```
+
+## Licenses
+
+this FFI Library is Free License. Its not have any limit.
+
+## Third Party License
+
+* Mediainfo ( MediaInfo(Lib) License ) : ( https://mediaarea.net/en/MediaInfo/License )
+* LuaJit ( Mit License) : http://luajit.org/luajit.html 
+
+
